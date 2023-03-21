@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="High-Fidelity and Freely Controllable Talking Head Video Generation creates free-viewpoint portraits (nerfies) from casually captured videos."
+    />
+    <meta name="keywords" content="PECHead" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      High-Fidelity and Freely Controllable Talking Head Video Generation
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="icon" href="./assets/images/favicon.svg" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./assets/js/fontawesome.all.min.js"></script>
+    <script src="./assets/js/bulma-carousel.min.js"></script>
+    <script src="./assets/js/bulma-slider.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </head>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              High-Fidelity and Freely Controllable Talking Head Video
+              Generation
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"
+                ><a href="https://yuegao.me">Yue Gao</a>,</span
+              >
+              <span class="author-block"><a>Yuan Zhou</a>,</span>
+              <span class="author-block"><a>Jinglu Wang</a>,</span>
+              <span class="author-block"><a>Xiao Li</a>,</span>
+              <span class="author-block"><a>Xiang Ming</a>,</span>
+              <span class="author-block"><a>Yan Lu</a>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Microsoft Research</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a
+                    href="https://arxiv.org/"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a
+                    href="https://arxiv.org/"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a
+                    href="https://github.com/google/nerfies"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (soon)</span>
+                  </a>
+                </span> -->
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img id="teaser" src="images/teaser.jpeg" />
+        <h2 class="subtitle has-text-centered">
+          <span class="small-caps">PEChead</span> generates high-fidelity head
+          pose and expression editing results.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Talking head generation is to generate video based on a given
+              source identity. However, existing methods are suffering from many
+              challenges in getting a natural and controllable video generation.
+              First, the generated human face usually has strange deformation
+              and severe distortions. Second, the controllability of different
+              attributes during the generation process is limited as the
+              movement information, including poses and expressions, is
+              implicitly entangled in the driving image. Moreover, due to the
+              reliability of the extracted learned landmarks between the
+              adjacent frames, the generated video flickering issue also
+              frequently exists.
+            </p>
+            <p>
+              In this paper, we propose a novel model to produce high-fidelity
+              talking head videos and enable head pose and expression to be
+              freely controllable. Specifically, our method simultaneously
+              utilizes the self-supervised learned landmarks and the 3D face
+              model-based landmarks. A novel motion-aware multi-scale feature
+              alignment module is proposed to effectively transfer the motion
+              without face distortion. We further improve the smoothness of the
+              synthesized talking head videos with a feature context adaptation
+              and propagation module. Extensive experimental results on
+              challenging datasets demonstrate the state-of-the-art performance
+              of our model.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Video Results. -->
+      <div class="columns is-centered" >
+
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3  has-text-centered">Video Results</h2>
+            <p>
+              Using <i>PECHead</i> you can create great visual results for head pose and expression editing, including portrait reconstruction and reenactment, and more.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Visual Results. -->
+      <!-- Pose Free. -->
+      <div class="column">
+        <h3 class="title is-3">Head Pose Free Editing</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="pose_free_1" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/free_wild_pose_merged_frames_1.mp4" type="video/mp4">
+            </video>
+            <video id="pose_free_2" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/free_wild_pose_merged_frames_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Portrait Frontalization</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="front_1" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/front_merged_frames_1.mp4" type="video/mp4">
+            </video>
+            <video id="front_2" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/front_merged_frames_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Same-Identity Video Reconstruction</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="recon_0" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/recon_merged_frames_0.mp4" type="video/mp4">
+            </video>
+            <video id="recon_1" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/recon_merged_frames_1.mp4" type="video/mp4">
+            </video>
+            <video id="recon_2" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/recon_merged_frames_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Cross-Identity Video Face Reenactment</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="reenact_0" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/reenact_merged_frames_0.mp4" type="video/mp4">
+            </video>
+            <video id="reenact_1" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/reenact_merged_frames_1.mp4" type="video/mp4">
+            </video>
+            <video id="reenact_2" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/reenact_merged_frames_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Facial Expression Transferring</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="expr_trans" autoplay controls muted loop playsinline width="100%">
+              <source src="./videos/expression_merged_frames.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Video Face Reenactment on Wild Identities</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="reenact_wild_1" autoplay controls muted loop playsinline width="100%">
+              <source src="videos/reenact_wild_merged_frames_1.mp4" type="video/mp4">
+            </video>
+            <video id="reenact_wild_2" autoplay controls muted loop playsinline width="100%">
+              <source src="videos/reenact_wild_merged_frames_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{gao2023pechead,
+  author    = {Gao, Yue and Zhou, Yuan and Wang, Jinglu and Li, Xiao and Ming, Xiang and Lu, Yan},
+  title     = {High-Fidelity and Freely Controllable Talking Head Video Generation},
+  journal   = {CVPR},
+  year      = {2023},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+           href="./pdfs/">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <a class="icon-link" href="https://github.com/hologerry" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <!-- <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p> -->
+            <p>
+              This website's source code is heavily borrowed from the <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+              We thank the authors for their great work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
