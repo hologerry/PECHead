@@ -8,14 +8,9 @@
     />
     <meta name="keywords" content="PECHead" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      High-Fidelity and Freely Controllable Talking Head Video Generation
-    </title>
+    <title>High-Fidelity and Freely Controllable Talking Head Video Generation</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FZ85TD1NHH"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ85TD1NHH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -26,19 +21,13 @@
       gtag("config", "G-FZ85TD1NHH");
     </script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/bulma-slider.min.css" />
     <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="icon" href="./assets/images/favicon.svg" />
 
@@ -55,41 +44,14 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
-                High-Fidelity and Freely Controllable Talking Head Video
-                Generation
-              </h1>
+              <h1 class="title is-1 publication-title">High-Fidelity and Freely Controllable Talking Head Video Generation</h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block"
-                  ><a href="https://yuegao.me">Yue Gao</a>,</span
-                >
-                <span class="author-block"
-                  ><a
-                    href="https://www.microsoft.com/en-us/research/people/zhouyuan/"
-                    >Yuan Zhou</a
-                  >,</span
-                >
-                <span class="author-block"
-                  ><a
-                    href="https://www.microsoft.com/en-us/research/people/jinglwa/"
-                    >Jinglu Wang</a
-                  >,</span
-                >
-                <span class="author-block"
-                  ><a href="https://pableeto.github.io/">Xiao Li</a>,</span
-                >
-                <span class="author-block"
-                  ><a
-                    href="https://www.microsoft.com/en-us/research/people/xiangming/"
-                    >Xiang Ming</a
-                  >,</span
-                >
-                <span class="author-block"
-                  ><a
-                    href="https://www.microsoft.com/en-us/research/people/yanlu/"
-                    >Yan Lu</a
-                  ></span
-                >
+                <span class="author-block"><a href="https://yuegao.me">Yue Gao</a>,</span>
+                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/zhouyuan/">Yuan Zhou</a>,</span>
+                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/jinglwa/">Jinglu Wang</a>,</span>
+                <span class="author-block"><a href="https://pableeto.github.io/">Xiao Li</a>,</span>
+                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/xiangming/">Xiang Ming</a>,</span>
+                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/yanlu/">Yan Lu</a></span>
               </div>
 
               <div class="is-size-5 publication-authors">
@@ -99,7 +61,7 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- PDF Link. -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a
                       href="https://arxiv.org/"
                       class="external-link button is-normal is-rounded is-dark"
@@ -109,16 +71,13 @@
                       </span>
                       <span>Paper</span>
                     </a>
-                  </span>
+                  </span> -->
                   <span class="link-block">
-                    <a
-                      href="https://arxiv.org/"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
+                    <a href="https://arxiv.org/" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
                       </span>
-                      <span>arXiv</span>
+                      <span>arXiv (soon)</span>
                     </a>
                   </span>
                   <!-- Code Link. -->
@@ -153,8 +112,7 @@
         <div class="hero-body">
           <img id="teaser" src="images/teaser.jpeg" />
           <h2 class="subtitle has-text-centered">
-            <span class="small-caps">PEChead</span> generates high-fidelity head
-            pose and expression editing results.
+            <span class="small-caps">PEChead</span> generates high-fidelity head pose and expression editing results.
           </h2>
         </div>
       </div>
@@ -168,30 +126,18 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Talking head generation is to generate video based on a given
-                source identity. However, existing methods are suffering from
-                many challenges in getting a natural and controllable video
-                generation. First, the generated human face usually has strange
-                deformation and severe distortions. Second, the controllability
-                of different attributes during the generation process is limited
-                as the movement information, including poses and expressions, is
-                implicitly entangled in the driving image. Moreover, due to the
-                reliability of the extracted learned landmarks between the
-                adjacent frames, the generated video flickering issue also
-                frequently exists.
+                Talking head generation is to generate video based on a given source identity and target motion. However, current methods face several
+                challenges that limit the quality and controllability of the generated videos. First, the generated face often has unexpected
+                deformation and severe distortions. Second, the driving image does not explicitly disentangle movement-relevant information, such as
+                poses and expressions, which restricts the manipulation of different attributes during generation. Third, the generated videos tend to
+                have flickering artifacts due to the inconsistency of the extracted landmarks between adjacent frames.
               </p>
               <p>
-                In this paper, we propose a novel model to produce high-fidelity
-                talking head videos and enable head pose and expression to be
-                freely controllable. Specifically, our method simultaneously
-                utilizes the self-supervised learned landmarks and the 3D face
-                model-based landmarks. A novel motion-aware multi-scale feature
-                alignment module is proposed to effectively transfer the motion
-                without face distortion. We further improve the smoothness of
-                the synthesized talking head videos with a feature context
-                adaptation and propagation module. Extensive experimental
-                results on challenging datasets demonstrate the state-of-the-art
-                performance of our model.
+                In this paper, we propose a novel model that produces high-fidelity talking head videos with free control over head pose and
+                expression. Our method leverages both self-supervised learned landmarks and 3D face model-based landmarks to model the motion. We also
+                introduce a novel motion-aware multi-scale feature alignment module to effectively transfer the motion without face distortion.
+                Furthermore, we enhance the smoothness of the synthesized talking head videos with a feature context adaptation and propagation
+                module. We evaluate our model on challenging datasets and demonstrate its state-of-the-art performance.
               </p>
             </div>
           </div>
@@ -208,9 +154,8 @@
             <div class="content">
               <h2 class="title is-3 has-text-centered">Video Results</h2>
               <p>
-                Using <i>PECHead</i> you can create great visual results for
-                head pose and expression editing, including portrait
-                reconstruction and reenactment, and more.
+                Using <i>PECHead</i> you can create great visual results for head pose and expression editing, including portrait reconstruction and
+                reenactment, and more.
               </p>
             </div>
           </div>
@@ -221,33 +166,11 @@
           <h3 class="title is-3">Head Pose Free Editing</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="pose_free_1"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/free_wild_pose_merged_frames_1.mp4"
-                  type="video/mp4"
-                />
+              <video id="pose_free_1" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/free_wild_pose_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video
-                id="pose_free_2"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/free_wild_pose_merged_frames_2.mp4"
-                  type="video/mp4"
-                />
+              <video id="pose_free_2" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/free_wild_pose_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -257,33 +180,11 @@
           <h3 class="title is-3">Portrait Frontalization</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="front_1"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/front_merged_frames_1.mp4"
-                  type="video/mp4"
-                />
+              <video id="front_1" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/front_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video
-                id="front_2"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/front_merged_frames_2.mp4"
-                  type="video/mp4"
-                />
+              <video id="front_2" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/front_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -293,47 +194,14 @@
           <h3 class="title is-3">Same-Identity Video Reconstruction</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="recon_0"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/recon_merged_frames_0.mp4"
-                  type="video/mp4"
-                />
+              <video id="recon_0" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/recon_merged_frames_0.mp4" type="video/mp4" />
               </video>
-              <video
-                id="recon_1"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/recon_merged_frames_1.mp4"
-                  type="video/mp4"
-                />
+              <video id="recon_1" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/recon_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video
-                id="recon_2"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/recon_merged_frames_2.mp4"
-                  type="video/mp4"
-                />
+              <video id="recon_2" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/recon_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -343,47 +211,14 @@
           <h3 class="title is-3">Cross-Identity Video Face Reenactment</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="reenact_0"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/reenact_merged_frames_0.mp4"
-                  type="video/mp4"
-                />
+              <video id="reenact_0" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/reenact_merged_frames_0.mp4" type="video/mp4" />
               </video>
-              <video
-                id="reenact_1"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/reenact_merged_frames_1.mp4"
-                  type="video/mp4"
-                />
+              <video id="reenact_1" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/reenact_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video
-                id="reenact_2"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/reenact_merged_frames_2.mp4"
-                  type="video/mp4"
-                />
+              <video id="reenact_2" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/reenact_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -393,19 +228,8 @@
           <h3 class="title is-3">Facial Expression Transferring</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="expr_trans"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="./videos/expression_merged_frames.mp4"
-                  type="video/mp4"
-                />
+              <video id="expr_trans" autoplay controls muted loop playsinline width="100%">
+                <source src="./videos/expression_merged_frames.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -415,33 +239,11 @@
           <h3 class="title is-3">Video Face Reenactment on Wild Identities</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video
-                id="reenact_wild_1"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="videos/reenact_wild_merged_frames_1.mp4"
-                  type="video/mp4"
-                />
+              <video id="reenact_wild_1" autoplay controls muted loop playsinline width="100%">
+                <source src="videos/reenact_wild_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video
-                id="reenact_wild_2"
-                autoplay
-                controls
-                muted
-                loop
-                playsinline
-                width="100%"
-              >
-                <source
-                  src="videos/reenact_wild_merged_frames_2.mp4"
-                  type="video/mp4"
-                />
+              <video id="reenact_wild_2" autoplay controls muted loop playsinline width="100%">
+                <source src="videos/reenact_wild_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -468,12 +270,7 @@
            href="./pdfs/">
           <i class="fas fa-file-pdf"></i>
         </a> -->
-          <a
-            class="icon-link"
-            href="https://github.com/hologerry"
-            class="external-link"
-            disabled
-          >
+          <a class="icon-link" href="https://github.com/hologerry" class="external-link" disabled>
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -487,9 +284,7 @@
             </p> -->
               <p>
                 The source code of this website is heavily borrowed from the
-                <a href="https://github.com/nerfies/nerfies.github.io"
-                  >nerfies</a
-                >. We thank the authors for their great work.
+                <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We thank the authors for their great work.
               </p>
             </div>
           </div>
