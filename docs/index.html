@@ -23,19 +23,18 @@
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./assets/css/bulma-slider.min.css" />
-    <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="icon" href="./assets/images/favicon.svg" />
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/css/video-gallery.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./assets/js/fontawesome.all.min.js"></script>
-    <script src="./assets/js/bulma-carousel.min.js"></script>
-    <script src="./assets/js/bulma-slider.min.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/video-gallery.js"></script>
   </head>
 
   <body>
@@ -45,14 +44,14 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">High-Fidelity and Freely Controllable Talking Head Video Generation</h1>
-              <!-- <div class="is-size-5 publication-authors">
-                <span class="author-block"><a href="https://yuegao.me">Yue Gao</a>,</span>
-                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/zhouyuan/">Yuan Zhou</a>,</span>
+              <div class="is-size-5 publication-authors">
+                <!-- <span class="author-block"><a href="https://yuegao.me">Yue Gao</a></span><p>et al.</p> -->
+                <!-- <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/zhouyuan/">Yuan Zhou</a>,</span>
                 <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/jinglwa/">Jinglu Wang</a>,</span>
                 <span class="author-block"><a href="https://pableeto.github.io/">Xiao Li</a>,</span>
                 <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/xiangming/">Xiang Ming</a>,</span>
-                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/yanlu/">Yan Lu</a></span>
-              </div> -->
+                <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/yanlu/">Yan Lu</a></span> -->
+              </div>
 
               <!-- <div class="is-size-5 publication-authors">
                 <span class="author-block">Microsoft Research</span>
@@ -123,9 +122,10 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <img id="teaser" src="images/teaser.jpeg" />
-          <h2 class="subtitle has-text-centered">
+          <br />
+          <p class="subtitle has-text-centered">
             <span class="small-caps">PEChead</span> generates high-fidelity head pose and expression editing results.
-          </h2>
+          </p>
         </div>
       </div>
     </section>
@@ -158,110 +158,277 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Video Results. -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="content">
-              <h2 class="title is-3 has-text-centered">Video Results</h2>
+
+    <!-- Head Pose Free Editing -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Head Pose Free Editing</h2>
+
+          <div class="video-gallery-buttons" id="gallery-buttons-pose-free">
+            <button class="button is-two-line is-primary" data-video-index="0">
               <p>
-                Using <i>PECHead</i> you can create great visual results for head pose and expression editing, including portrait reconstruction and
-                reenactment, and more.
+                Video Results <br />
+                Group A
               </p>
-            </div>
+            </button>
+            <button class="button is-two-line" data-video-index="1">
+              <p>
+                Video Results <br />
+                Group B
+              </p>
+            </button>
           </div>
-        </div>
-        <!--/ Visual Results. -->
-        <!-- Pose Free. -->
-        <div class="column">
-          <h3 class="title is-3">Head Pose Free Editing</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="pose_free_1" autoplay controls muted loop playsinline width="100%">
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for head pose and expression editing.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-pose-free">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
                 <source src="./videos/free_wild_pose_merged_frames_1.mp4" type="video/mp4" />
               </video>
-              <video id="pose_free_2" autoplay controls muted loop playsinline width="100%">
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
                 <source src="./videos/free_wild_pose_merged_frames_2.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-3">Portrait Frontalization</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="front_1" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/front_merged_frames_1.mp4" type="video/mp4" />
-              </video>
-              <video id="front_2" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/front_merged_frames_2.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-3">Same-Identity Video Reconstruction</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="recon_0" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/recon_merged_frames_0.mp4" type="video/mp4" />
-              </video>
-              <video id="recon_1" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/recon_merged_frames_1.mp4" type="video/mp4" />
-              </video>
-              <video id="recon_2" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/recon_merged_frames_2.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-3">Cross-Identity Video Face Reenactment</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="reenact_0" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/reenact_merged_frames_0.mp4" type="video/mp4" />
-              </video>
-              <video id="reenact_1" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/reenact_merged_frames_1.mp4" type="video/mp4" />
-              </video>
-              <video id="reenact_2" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/reenact_merged_frames_2.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-3">Facial Expression Transferring</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="expr_trans" autoplay controls muted loop playsinline width="100%">
-                <source src="./videos/expression_merged_frames.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-3">Video Face Reenactment on Wild Identities</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="reenact_wild_1" autoplay controls muted loop playsinline width="100%">
-                <source src="videos/reenact_wild_merged_frames_1.mp4" type="video/mp4" />
-              </video>
-              <video id="reenact_wild_2" autoplay controls muted loop playsinline width="100%">
-                <source src="videos/reenact_wild_merged_frames_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Head Pose Free Editing-->
+
+
+    <!-- Portrait Frontalization -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Portrait Frontalization</h2>
+
+          <div class="video-gallery-buttons" id="gallery-buttons-front">
+            <button class="button is-two-line is-primary" data-video-index="0">
+              <p>
+                Video Results <br />
+                Group A
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="1">
+              <p>
+                Video Results <br />
+                Group B
+              </p>
+            </button>
+          </div>
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for portrait frontalization.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-front">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/front_merged_frames_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/front_merged_frames_2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Portrait Frontalization-->
+
+    <!-- Same-Identity Video Reconstruction -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Same-Identity Video Reconstruction</h2>
+
+          <div class="video-gallery-buttons" id="gallery-buttons-recon">
+            <button class="button is-two-line is-primary" data-video-index="0">
+              <p>
+                Video Results <br />
+                Group A
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="1">
+              <p>
+                Video Results <br />
+                Group B
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="2">
+              <p>
+                Video Results <br />
+                Group C
+              </p>
+            </button>
+          </div>
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for portrait reconstruction.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-recon">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/recon_merged_frames_0.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/recon_merged_frames_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/recon_merged_frames_2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Same-Identity Video Reconstruction-->
+
+
+    <!-- Cross-Identity Video Face Reenactment -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Cross-Identity Video Face Reenactment</h2>
+
+          <div class="video-gallery-buttons" id="gallery-buttons-reenact">
+            <button class="button is-two-line is-primary" data-video-index="0">
+              <p>
+                Video Results <br />
+                Group A
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="1">
+              <p>
+                Video Results <br />
+                Group B
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="2">
+              <p>
+                Video Results <br />
+                Group C
+              </p>
+            </button>
+          </div>
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for  portrait reenactment.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-reenact">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/reenact_merged_frames_0.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/reenact_merged_frames_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/reenact_merged_frames_2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Cross-Identity Video Face Reenactment-->
+
+
+    <!-- Facial Expression Transferring -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Facial Expression Transferring</h2>
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for expression editing.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-transfer">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/expression_merged_frames.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Facial Expression Transferring-->
+
+
+
+    <!-- Video Face Reenactment on Wild Identities -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-2">Video Face Reenactment on Wild Identities</h2>
+
+          <div class="video-gallery-buttons" id="gallery-buttons-wild">
+            <button class="button is-two-line is-primary" data-video-index="0">
+              <p>
+                Video Results <br />
+                Group A
+              </p>
+            </button>
+            <button class="button is-two-line" data-video-index="1">
+              <p>
+                Video Results <br />
+                Group B
+              </p>
+            </button>
+          </div>
+
+          <div class="video-content">
+            <p>
+              Using <i>PECHead</i> you can create great visual results for portrait reconstruction on wild identities.
+            </p>
+          </div>
+
+          <div class="video-gallery-carousel" id="gallery-carousel-wild">
+            <div class="video-gallery-item active">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/reenact_wild_merged_frames_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-gallery-item">
+              <video preload="none" controls muted loop height="100%">
+                <source src="./videos/reenact_wild_merged_frames_2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Video Face Reenactment on Wild Identities-->
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
@@ -283,9 +450,9 @@
            href="./pdfs/">
           <i class="fas fa-file-pdf"></i>
         </a> -->
-          <a class="icon-link" href="https://github.com/hologerry" class="external-link" disabled>
-            <i class="fab fa-github"></i>
-          </a>
+        <a class="icon-link" href="https://yuegao.me" class="external-link" disabled>
+          <i class="fas fa-home"></i>
+        </a>
         </div>
         <div class="columns is-centered">
           <div class="column is-8">
@@ -297,7 +464,8 @@
             </p> -->
               <p>
                 The source code of this website is heavily borrowed from the
-                <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We thank the authors for their great work.
+                <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+                <br/> We thank the authors for their great work.
               </p>
             </div>
           </div>
